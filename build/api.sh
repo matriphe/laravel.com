@@ -1,19 +1,19 @@
 #!/bin/bash
 
-cd /home/forge/laravel.com/build/sami
+cd /Volumes/data/Development/php/documentation/laravel/build/sami
 
-rm -rf /home/forge/laravel.com/build/sami/build
-rm -rf /home/forge/laravel.com/build/sami/cache
+rm -rf /Volumes/data/Development/php/documentation/laravel/build/sami/build
+rm -rf /Volumes/data/Development/php/documentation/laravel/build/sami/cache
 
 # Run API Docs
-git clone https://github.com/laravel/framework.git /home/forge/laravel.com/build/sami/laravel
+git clone https://github.com/laravel/framework.git /Volumes/data/Development/php/documentation/laravel/build/sami/laravel
 
-php /home/forge/laravel.com/vendor/bin/sami.php update /home/forge/laravel.com/build/sami/sami.php
+php /Volumes/data/Development/php/documentation/laravel/vendor/bin/sami.php update /Volumes/data/Development/php/documentation/laravel/build/sami/sami.php
 
-cp -r /home/forge/laravel.com/build/sami/build/* /home/forge/laravel.com/public/api
+cp -r /Volumes/data/Development/php/documentation/laravel/build/sami/build/* /Volumes/data/Development/php/documentation/laravel/public/api
 
-rm -rf /home/forge/laravel.com/build/sami/build
-rm -rf /home/forge/laravel.com/build/sami/cache
+rm -rf /Volumes/data/Development/php/documentation/laravel/build/sami/build
+rm -rf /Volumes/data/Development/php/documentation/laravel/build/sami/cache
 
 # Cleanup
-rm -rf /home/forge/laravel.com/build/sami/laravel
+rm -rf /Volumes/data/Development/php/documentation/laravel/build/sami/laravel
