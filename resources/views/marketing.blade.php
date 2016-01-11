@@ -63,6 +63,13 @@ class Idea extends Eloquent {
 	</a>
 </section>
 
+<section class="panel laracon standout" id="laracon">
+    <object type="image/svg+xml" data="/assets/img/laracon-16.svg" width="350"></object>
+    <h2>This year Laracon goes <strong>bigger than ever</strong>. Early Bird tickets available for a limited time.</h2>
+    <a href="http://laracon.us" class="btn"><em>Laracon US</em>Louisville, Kentucky</a>
+    <a href="http://laracon.eu" class="btn"><em>Laracon EU</em>Amsterdam, Netherlands</a>
+</section>
+
 <section class="panel features dark" id="features">
 	<h1>Did someone say rapid?</h1>
 	<p>Elegant applications delivered at warp speed.</p>
@@ -148,9 +155,9 @@ Route::resource('photos', 'PhotoController');
 /**
  * Retrieve A User...
  */
-Route::get('/user/{id}', function($id)
+Route::get('/user/{user}', function(App\User $user)
 {
-	return User::with('posts')->firstOrFail($id);
+	return $user;
 })
 </code></pre>
 					</div>
@@ -173,7 +180,7 @@ Route::get('/user/{id}', function($id)
 				<a href="https://forge.laravel.com">
 					<img src="/assets/img/forge-logo.png" alt="Forge">
 				</a>
-				<p>Instant PHP Platforms On Linode, DigitalOcean, and more. Push to deploy, PHP 5.6, HHVM, queues, and everything you need to launch and deploy amazing Laravel applications.</p>
+				<p>Instant PHP Platforms On Linode, DigitalOcean, and more. Push to deploy, PHP 7.0, HHVM, queues, and everything you need to launch and deploy amazing Laravel applications.</p>
 				<p>Launch your application in minutes!</p>
 			</div>
 		</div>
