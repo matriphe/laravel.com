@@ -2,11 +2,23 @@
 	background: $color__salmon;
     padding: 0 20px;
     left: -70%;
-    display: none;
+
+    @media (min-width: 959px) {
+        display: none;
+    }
+
+    &:not(.scotch-panel-left) {
+        display: none;
+    }
 
     h2 {
+        position: relative;
         color: #fff;
-        font-weight: normal;
+        font-weight: 700;
+        padding: 0.75rem 0;
+        margin: 0;
+        margin-top: 20px;
+        font-size: 1rem;
     }
 
     .brand {
@@ -24,15 +36,15 @@
             color: #fff;
             font-size: 18px;
             font-weight: 400;
-            padding: 0 0 10px;
-            margin: 25px 0 0px;
+            padding: 0;
+            margin: 0;
             > ul {
                 border-top: 1px dashed rgba(0,0,0,.1);
-                display: block;
                 list-style: none;
                 margin: 10px 0 0 0;
                 padding: 10px 0 0 0;
-                font-size: 14px;
+                font-size: 13px;
+                line-height: 1.8;
             }
         }
     }
@@ -41,6 +53,7 @@
         padding: 25px 0;
         margin: 0;
         border-bottom: 1px solid rgba(255,255,255,.1);
+
         a {
             font-weight: bold;
         }

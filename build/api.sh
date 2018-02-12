@@ -1,19 +1,23 @@
 #!/bin/bash
+base=/Volumes/data/Development/php/documentation/laravel
+sami=${base}/build/sami
 
-cd /Volumes/data/Development/php/documentation/laravel/build/sami
+cd $sami
+composer install
 
-rm -rf /Volumes/data/Development/php/documentation/laravel/build/sami/build
-rm -rf /Volumes/data/Development/php/documentation/laravel/build/sami/cache
+# Cleanup Before
+rm -rf ${sami}/build
+rm -rf ${sami}/cache
+rm -rf ${sami}/laravel
 
 # Run API Docs
-git clone https://github.com/laravel/framework.git /Volumes/data/Development/php/documentation/laravel/build/sami/laravel
+git clone https://github.com/laravel/framework.git ${sami}/laravel
 
-php /Volumes/data/Development/php/documentation/laravel/vendor/bin/sami.php update /Volumes/data/Development/php/documentation/laravel/build/sami/sami.php
+${sami}/vendor/bin/sami.php update ${sami}/sami.php
 
-cp -r /Volumes/data/Development/php/documentation/laravel/build/sami/build/* /Volumes/data/Development/php/documentation/laravel/public/api
+cp -r ${sami}/build/* ${base}/public/api
 
-rm -rf /Volumes/data/Development/php/documentation/laravel/build/sami/build
-rm -rf /Volumes/data/Development/php/documentation/laravel/build/sami/cache
-
-# Cleanup
-rm -rf /Volumes/data/Development/php/documentation/laravel/build/sami/laravel
+# Cleanup After
+rm -rf ${sami}/build
+rm -rf ${sami}/cache
+rm -rf ${sami}/laravel
