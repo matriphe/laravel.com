@@ -19,11 +19,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
 </head>
 <body class="@yield('body-class', 'docs') language-php">
-<!--     <div class="laracon-banner">
-        <img src="/assets/svg/laracon-logo.svg" alt="">
-        Join 6,000+ Laravel Developers on February 7, 2018 for Laracon Online.
-        <a href="https://laracon.net">Get your tickets today!</a>
-    </div> -->
+    <div class="laracon-banner">
+        <!-- <img src="/assets/svg/laracon-logo.svg" alt=""> -->
+        Laravel Nova is now available!
+        <a href="https://nova.laravel.com">Get your copy today!</a>
+
+<!--         Spark 6.0, the official SaaS starter-kit built on Laravel, is now available!
+        <a href="https://spark.laravel.com">Get your copy today!</a> -->
+    </div>
     <span class="overlay"></span>
 
     <nav class="main">

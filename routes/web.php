@@ -4,7 +4,7 @@
  * Set the default documentation version...
  */
 if (! defined('DEFAULT_VERSION')) {
-    define('DEFAULT_VERSION', '5.6');
+    define('DEFAULT_VERSION', '5.7');
 }
 
 Route::get('/', function () {
@@ -41,3 +41,11 @@ Route::get('/partner/64robots', function () {
 Route::get('/partner/cubet', function () {
     return view('community-partner-cubet');
 });
+
+Route::get('/partner/dev-squad', function () {
+    return view('community-partner-dev-squad');
+});
+
+// Route::get('/partner/insider', function () {
+//     return view('community-partner-insider');
+// });
